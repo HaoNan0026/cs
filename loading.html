@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>略有耳闻的css</title>
+    <link rel="shortcut icon" href="https://m.php.cn/static/front/mobimages/mnewphplogo2.png">
+    <style>
+        ::selection {
+            color: #fff;
+            background-color: pink;
+        }
+
+        ::-moz-selection {
+            color: #fff;
+            background-color: pink;
+        }
+
+        ::-webkit-selection {
+            color: #fff;
+            background-color: pink;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            cursor: url("https://g.csdnimg.cn/static/logo/favicon32.ico"), auto;
+        }
+
+        .circle-breath {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            background: #999999;
+            box-shadow: 0 0 0 0 #999999;
+            height: 36px;
+            width: 36px;
+            border-radius: 50%;
+            animation: donghua 2.4s infinite;
+        }
+
+        @keyframes donghua {
+            0% {
+                transform: scale(0.60);
+                /* 注意rgba中的a的设置 */
+                box-shadow: 0 0 0 0 #999999;
+            }
+
+            60% {
+                transform: scale(1);
+                box-shadow: 0 0 0 36px rgba(204, 73, 152, 0%);
+            }
+
+            100% {
+                transform: scale(0.60);
+                box-shadow: 0 0 0 0 rgba(204, 73, 152, 0%);
+            }
+        }
+
+        .music {
+            position: relative;
+            left: 50%;
+            width: 175px;
+            height: 100px;
+            display: flex;
+        }
+
+        .music span {
+            width: 6px;
+            border-radius: 18px;
+            margin-right: 6px;
+        }
+
+        .music span:nth-child(1) {
+            /* 时间递增，参差不齐的效果 */
+            animation: bar1 2s 0.2s infinite linear;
+        }
+
+        .music span:nth-child(2) {
+            animation: bar2 2s 0.4s infinite linear;
+        }
+
+        .music span:nth-child(3) {
+            animation: bar3 2s 0.6s infinite linear;
+        }
+
+        .music span:nth-child(4) {
+            animation: bar4 2s 0.8s infinite linear;
+        }
+
+        .music span:nth-child(5) {
+            animation: bar5 2s 1.0s infinite linear;
+        }
+
+        .music span:nth-child(6) {
+            animation: bar6 2s 1.2s infinite linear;
+        }
+
+        .music span:nth-child(7) {
+            animation: bar7 2s 1.4s infinite linear;
+        }
+
+        .music span:nth-child(8) {
+            animation: bar8 2s 1.6s infinite linear;
+        }
+
+        .music span:nth-child(9) {
+            animation: bar9 2s 1.8s infinite linear;
+        }
+
+        @keyframes bar1 {
+            0% {
+                background: #f677b0;
+                margin-top: 25%;
+                height: 10%;
+            }
+
+            50% {
+                background: #f677b0;
+                height: 100%;
+                margin-top: 0%;
+            }
+
+            100% {
+                background: #f677b0;
+                height: 10%;
+                margin-top: 25%;
+            }
+        }
+
+        @keyframes bar2 {
+            0% {
+                background: #df7ff2;
+                margin-top: 25%;
+                height: 10%;
+            }
+
+            50% {
+                background: #df7ff2;
+                height: 100%;
+                margin-top: 0%;
+            }
+
+            100% {
+                background: #df7ff2;
+                height: 10%;
+                margin-top: 25%;
+            }
+        }
+
+        @keyframes bar3 {
+            0% {
+                background: #8c7ff2;
+                margin-top: 25%;
+                height: 10%;
+            }
+
+            50% {
+                background: #8c7ff2;
+                height: 100%;
+                margin-top: 0%;
+            }
+
+            100% {
+                background: #8c7ff2;
+                height: 10%;
+                margin-top: 25%;
+            }
+        }
+
+        @keyframes bar4 {
+            0% {
+                background: #7fd0f2;
+                margin-top: 25%;
+                height: 10%;
+            }
+
+            50% {
+                background: #7fd0f2;
+                height: 100%;
+                margin-top: 0%;
+            }
+
+            100% {
+                background: #7fd0f2;
+                height: 10%;
+                margin-top: 25%;
+            }
+        }
+
+        @keyframes bar5 {
+            0% {
+                background: #7ff2d3;
+                margin-top: 25%;
+                height: 10%;
+            }
+
+            50% {
+                background: #7ff2d3;
+                height: 100%;
+                margin-top: 0%;
+            }
+
+            100% {
+                background: #7ff2d3;
+                height: 10%;
+                margin-top: 25%;
+            }
+        }
+
+        @keyframes bar6 {
+            0% {
+                background: #7ff2a0;
+                margin-top: 25%;
+                height: 10%;
+            }
+
+            50% {
+                background: #7ff2a0;
+                height: 100%;
+                margin-top: 0%;
+            }
+
+            100% {
+                background: #7ff2a0;
+                height: 10%;
+                margin-top: 25%;
+            }
+        }
+
+        @keyframes bar7 {
+            0% {
+                background: #adf27f;
+                margin-top: 25%;
+                height: 10%;
+            }
+
+            50% {
+                background: #adf27f;
+                height: 100%;
+                margin-top: 0%;
+            }
+
+            100% {
+                background: #adf27f;
+                height: 10%;
+                margin-top: 25%;
+            }
+        }
+
+        @keyframes bar8 {
+            0% {
+                background: #e7f27f;
+                margin-top: 25%;
+                height: 10%;
+            }
+
+            50% {
+                background: #e7f27f;
+                height: 100%;
+                margin-top: 0%;
+            }
+
+            100% {
+                background: #e7f27f;
+                height: 10%;
+                margin-top: 25%;
+            }
+        }
+
+        @keyframes bar9 {
+            0% {
+                background: #ecaa64;
+                margin-top: 25%;
+                height: 10%;
+            }
+
+            50% {
+                background: #ecaa64;
+                height: 100%;
+                margin-top: 0%;
+            }
+
+            100% {
+                background: #ecaa64;
+                height: 10%;
+                margin-top: 25%;
+            }
+        }
+
+        .wrap {
+            margin: 120px 0 0 240px;
+            width: 75px;
+            height: 75px;
+            position: relative;
+            /* transform-origin: 设置的效果搭配边框看，效果更加明显 */
+            /* border: 1px solid #e9e9e9; */
+        }
+
+        .round {
+            position: absolute;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background-color: rgb(241, 141, 157);
+            /* 加上动画效果 */
+            animation: circleRound 2.8s ease infinite;
+            /* 设置旋转中心，搭配.wrap的border看 */
+            transform-origin: 50% 75px;
+        }
+
+        /* 注意z-index层级关系，依次递减 */
+        .round:nth-child(1) {
+            z-index: 7;
+        }
+
+        /* 注意动画延后animation-delay播放，依次递增 */
+        /* 至于小圆球则越来越小 */
+        .round:nth-child(2) {
+            height: 12px;
+            width: 12px;
+            background-color: rgb(199, 136, 185);
+            animation-delay: .2s;
+            z-index: 6;
+        }
+
+        .round:nth-child(3) {
+            height: 11px;
+            width: 11px;
+            background-color: rgb(153, 69, 223);
+            animation-delay: .4s;
+            z-index: 5;
+        }
+
+        .round:nth-child(4) {
+            height: 10px;
+            width: 10px;
+            background-color: rgb(69, 141, 223);
+            animation-delay: .6s;
+            z-index: 4;
+        }
+
+        .round:nth-child(5) {
+            height: 9px;
+            width: 9px;
+            background-color: rgb(69, 223, 203);
+            animation-delay: .8s;
+            z-index: 3;
+        }
+
+        .round:nth-child(6) {
+            height: 8px;
+            width: 8px;
+            background-color: rgb(100, 223, 69);
+            animation-delay: 1s;
+            z-index: 2;
+        }
+
+        .round:nth-child(7) {
+            height: 7px;
+            width: 7px;
+            background-color: rgb(223, 200, 69);
+            animation-delay: 1.2s;
+            z-index: 1;
+        }
+        @keyframes circleRound {
+            to {
+                transform: rotate(1turn);
+            }
+        }
+
+        .title {
+            width: 400px;
+            margin: auto;
+            line-height: 2;
+            font-size: 20px;
+        }
+
+        span {
+            padding-bottom: 7px;
+            background: linear-gradient(to right, #987548, #127637) no-repeat right bottom;
+            background-size: 0 2px;
+            transition: background-size 1000ms;
+        }
+
+        span:hover {
+            background-position-x: left;
+            background-size: 100% 2px;
+        }
+
+        .aixinBox {
+            position: relative;
+            right: -10px;
+            width: 120px;
+            height: 120px;
+            background-color: #f00;
+            margin: 200px auto;
+            margin-bottom: 80px;
+            transform: rotate(135deg) scale(0.9);
+            animation: love 1s infinite;
+            box-shadow: 0 0 30px 5px rgba(255, 0, 0, .7);
+        }
+
+        .aixinBox:before,
+        .aixinBox:after {
+            content: '';
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: #f00;
+            box-shadow: 0 0 30px 5px rgba(255, 0, 0, .7);
+        }
+
+        .aixinBox:after {
+            left: -68px;
+        }
+
+        .aixinBox:before {
+            top: 68px;
+        }
+
+        @keyframes love {
+            0% {
+                transform: rotate(135deg) scale(0.85);
+            }
+
+            50% {
+                transform: rotate(135deg) scale(1);
+            }
+
+            100% {
+                transform: rotate(135deg) scale(0.85);
+            }
+        }
+
+        .location {
+            position: relative;
+            top: -150px;
+            left: 150px;
+        }
+
+        .button {
+            width: 120px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: white;
+        }
+
+        .button:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            /* background-color: #51bfff; */
+            /* 线性渐变 */
+            background: linear-gradient(to right, yellow, green);
+            transform: skewX(-45deg);
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="circle-breath"></div>
+    <div class="music">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="wrap">
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+    </div>
+    <div class="title">
+        <span>不积跬步无以至千里，不积小流无以成江海。</span><br>
+    </div>
+    <div class="aixinBox"></div>
+    <div class="location button"></div>
+</body>
+
+</html>
+<script>
+    var arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+    // 将arr 分成 三个一组的数组 并且顺序打乱
+    arr = arr.sort(function(){
+        return Math.random() - 0.5;
+    });
+    var newArr = [];
+    for(var i = 0; i < arr.length; i+=3){
+        newArr.push(arr.slice(i,i+3).sort(function(){
+            return Math.random() - 0.5;
+        }));
+    }
+    console.log(newArr);
+    // 把arr中的元素加密成golang能破解的字符串
+    var str = '';
+    for(var i = 0; i < newArr.length; i++){
+        for(var j = 0; j < newArr[i].length; j++){
+            str += String.fromCharCode(newArr[i][j] + 96);
+        }
+        str += '';
+    }
+    console.log(str);  
+
+    (function (window, document, undefined) {
+        var hearts = [];
+        window.requestAnimationFrame = (function () {
+            return window.requestAnimationFrame ||
+                window.webkitRequestAnimationFrame ||
+                window.mozRequestAnimationFrame ||
+                window.oRequestAnimationFrame ||
+                window.msRequestAnimationFrame ||
+                function (callback) {
+                    setTimeout(callback, 1000 / 60);
+                }
+        })();
+        init();
+        function init() {
+            css(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: absolute;}.heart:after{top: -5px;}.heart:before{left: -5px;}");
+            attachEvent();
+            gameloop();
+        }
+        function gameloop() {
+            for (var i = 0; i < hearts.length; i++) {
+                if (hearts[i].alpha <= 0) {
+                    document.body.removeChild(hearts[i].el);
+                    hearts.splice(i, 1);
+                    continue;
+                }
+                hearts[i].y--;
+                hearts[i].scale += 0.004;
+                hearts[i].alpha -= 0.013;
+                hearts[i].el.style.cssText = "left:" + hearts[i].x + "px;top:" + hearts[i].y + "px;opacity:" + hearts[i].alpha + ";transform:scale(" + hearts[i].scale + "," + hearts[i].scale + ") rotate(45deg);background:" + hearts[i].color;
+            }
+            requestAnimationFrame(gameloop);
+        }
+        function attachEvent() {
+            var old = typeof window.onclick === "function" && window.onclick;
+            window.onclick = function (event) {
+                old && old();
+                createHeart(event);
+            }
+        }
+        function createHeart(event) {
+            var d = document.createElement("div");
+            d.className = "heart";
+            hearts.push({
+                el: d,
+                x: event.clientX - 5,
+                y: event.clientY - 5,
+                scale: 1,
+                alpha: 1,
+                color: randomColor()
+            });
+            document.body.appendChild(d);
+        }
+        function css(css) {
+            var style = document.createElement("style");
+            style.type = "text/css";
+            try {
+                style.appendChild(document.createTextNode(css));
+            } catch (ex) {
+                style.styleSheet.cssText = css;
+            }
+            document.getElementsByTagName('head')[0].appendChild(style);
+        }
+        function randomColor() {
+            return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + ")";
+        }
+    })(window, document);
+</script>
